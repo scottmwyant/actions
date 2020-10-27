@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+        - master
+
+env: 
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Use local action
+        uses: ./.github/actions
+        

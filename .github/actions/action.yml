@@ -1,0 +1,5 @@
+name: Test
+description: Run a script in a container
+runs:
+  using: docker
+  image: Dockerfile
