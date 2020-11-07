@@ -1,0 +1,13 @@
+name: Test
+description: Test my NodeJS action
+runs:
+  using: 'node12'
+  main: 'index.js'
+inputs:
+  extensionId:
+    description: publisher.extensionName
+    required: true
+    default: ms-python.python
+  proposedVersion:
+    description: 'The proposed version number'
+    required: true
