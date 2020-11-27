@@ -14,9 +14,11 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v2
 
-      - name: Use local action
+      - name: Run test action
         uses: scottmwyant/match-tag-to-package-version@master
         id: test-action
+        with:
+            tag_prefix: v
 
       - name: Log output
         run: echo tag is $tag and version is $version
