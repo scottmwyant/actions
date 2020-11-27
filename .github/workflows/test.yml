@@ -1,7 +1,7 @@
 on:
-  push:
-    branches:
-        - master
+  create:
+    tag:
+      - v\d+\.\d+\.\d+(\.[\w\d-]+)?
 
 env: 
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
